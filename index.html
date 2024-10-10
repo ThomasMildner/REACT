@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CUI23 Workshop page">
+    <meta name="Thomas Mildner">
+    <title>From C-3P0 to HAL </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"
+            integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <div id="home-wrapper">
+        <div id="home-navigation">
+<!--            <span class="burger">-->
+<!--                <button class="burger-menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">-->
+<!--                    <svg width="4vh" height="4vh" viewBox="0 0 100 100">-->
+<!--                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />-->
+<!--                        <path class="line line2" d="M 20,50 H 80" />-->
+<!--                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />-->
+<!--                    </svg>-->
+<!--                </button>-->
+<!--            </span>-->
+
+            <div id="nav-list">
+                <h1 id="nav-title">REACT '24 Workshop</h1>
+            </div>
+
+        </div>
+        <div id="home-title">
+            <h2>A workshop on <b><u>R</u></b>esponsible and <b><u>E</u></b>thical <b><u>A</u></b>I in <b><u>C</u></b>UI-<b><u>T</u></b>echnologies.
+            </h2>
+            <p>A workshop in collaboration of the <b>University of Bremen</b>, <b>Technical University of Eindhoven</b>,
+                and <b>University College Dublin</b>, with support by the Klaus Tschira Stiftung and Leibniz Science Campus Digital Public Health</p>
+        </div>
+
+
+        <div id="home-info">
+            <span id="home-info-wrapper">
+                <div id="home-info-left">
+                    <h2>About the Workshop</h2>
+                    <p>
+                        As communicative agents like voice assistants, social robots, and taskbots become part of our
+                        everyday lives, we must rethink how we interact with and design these technologies. Rather than
+                        simply integrating them into daily routines, it is crucial to empower users, ensuring they
+                        maintain agency and control over these interactions. This workshop addresses the growing
+                        complexity of AI systems, particularly conversational agents, and explores how we can embed
+                        technologies like large language models (LLMs) responsibly.
+                    </p>
+
+                    <p>
+                        We will explore the importance of identifying and mitigating harmful design practices, such as
+                        dark patterns, that can undermine user autonomy. Additionally, we will consider how to design AI
+                        agents that adapt to diverse social contexts while remaining transparent and user-centric. The
+                        aim is to foster AI technologies that not only serve functional purposes but also promote
+                        ethical engagement, empowering individuals to make informed decisions and maintain trust in
+                        their interactions with these systems.
+
+                    </p>
+                    <p>
+                        Through collaborative discussions, we will open new avenues toward more responsible AI, ensuring
+                        that future advancements in CUI-technologies reflect human values and needs.
+                    </p>
+
+                    <br>
+
+                    <h2>Schedule</h2>
+
+                    <div class="calendar">
+
+                    <div class="timeline">
+                        <div class="spacer"></div>
+                        <div class="time-marker">8 AM</div>
+                        <div class="time-marker">9 AM</div>
+                        <div class="time-marker">10 AM</div>
+                        <div class="time-marker">11 AM</div>
+                        <div class="time-marker">12 PM</div>
+                        <div class="time-marker">1 PM</div>
+                        <div class="time-marker">2 PM</div>
+                        <div class="time-marker">3 PM</div>
+                        <div class="time-marker">4 PM</div>
+                        <div class="time-marker">5 PM</div>
+                        <div class="time-marker">6 PM</div>
+                  </div>
+                  <div class="days">
+                    <div class="day mon">
+                      <div class="date">
+                        <p class="date-day">Nov</p>
+                        <p class="date-num">4th</p>
+                      </div>
+                      <div class="events">
+                           <div class="event start-9 end-10 cell-background">
+                                  <p class="title">Welcome</p>
+                            </div>
+                            <div class="event start-10 end-12 cell-background">
+                                  <p class="title">Session 1</p>
+                                  <p class="time">10 AM - 12 AM</p>
+                            </div>
+                            <div class="event start-12 end-13 lunch-background">
+                              <p class="title">Lunch 🍕</p>
+                            </div>
+                            <div class="event start-13 end-15 cell-background">
+                                  <p class="title">Session 2</p>
+                                  <p class="time">1 PM - 3 PM</p>
+                            </div>
+                           <div class="event start-15 end-16 lunch-background">
+                                  <p class="title">Break ☕</p>
+                            </div>
+                            <div class="event start-16 end-17 cell-background">
+                                  <p class="title">Session 3</p>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="day tues">
+                      <div class="date">
+                        <p class="date-day">Nov</p>
+                        <p class="date-num">5th</p>
+                      </div>
+                      <div class="events">
+
+                            <div class="event start-9 end-12 cell-background">
+                                  <p class="title">Session 4</p>
+                                  <p class="time">9 AM - 12 AM</p>
+                            </div>
+                            <div class="event start-12 end-13 lunch-background">
+                              <p class="title">Lunch 🍕</p>
+                            </div>
+                            <div class="event start-13 end-15 cell-background">
+                                  <p class="title">Session 5</p>
+                                  <p class="time">1 PM - 3 PM</p>
+                            </div>
+                           <div class="event start-15 end-16 lunch-background">
+                                  <p class="title">Break ☕</p>
+                            </div>
+                            <div class="event start-16 end-17 cell-background">
+                                  <p class="title">Session 6</p>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="day wed">
+                      <div class="date">
+                        <p class="date-day">Nov</p>
+                        <p class="date-num">6th</p>
+                      </div>
+                      <div class="events">
+                          <div class="event start-9 end-11 cell-background">
+                                  <p class="title">Session 4</p>
+                                  <p class="time">9 AM - 12 AM</p>
+                            </div>
+                            <div class="event start-11 end-12 cell-background">
+                                  <p class="title">End</p>
+                            </div>
+                            <div class="event start-12 end-13 lunch-background">
+                              <p class="title">Lunch 🍕</p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div id="home-info-right">
+                    <h2>Topics</h2>
+                    <ul>
+                        <li>Responsible Embedding of LLMs in CUIs</li>
+                        <li>Ethical caveats in CUIs and HRI</li>
+                    </ul>
+
+                    <br>
+                    <hr>
+                    <br>
+
+<!--                    <h2>Key dates</h2>-->
+<!--                    <p><b>Submission due</b> <br> 2nd of June, 2023 AoE</p>-->
+<!--                    <p><b>Notification sent</b><br>14th of June, 2023 AoE</p>-->
+<!--                    <p><b>Workshop date</b><br>19th of July, 1:00 pm - 5:00 pm (UTC+2)</p>-->
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <span id="organisers-wrapper">
+        <div class="content-title">
+            <h4>Organisers</h4>
+        </div>
+        <div class="content-text">
+            <p> We are excited about the organisation committee of this workshop with expertise in diverse fields. Together,
+                the organizers have a history in a variety of topics including human-robot interaction, natural language
+                processing, conversational user interfaces, dark patterns, multi-modal communication, as well as pervasive and
+                persuasive technologies. Below, we are happy to introduce each co-organizator individually.
+            </p>
+            <br><hr><br>
+                <div class="organiser-content">
+                    <img class="organiser-portrait" src="img/mildner.jpg">
+                    <p class="organiser-description">
+                        <b>Thomas Mildner</b> is a postdoctoral researcher at the Digital Media Lab at the University
+                        of Bremen, in collaboration with the Leibniz Science Campus Digital Public Health. His research focuses on ethical design and developing
+                        technologies to support informed and empowered decision-making. His work
+                        thereby considers social media platforms but also ubiquitous technologies including Conversational User Interfaces.
+                    </p>
+                </div>
+
+                <div class="organiser-content">
+                    <p class="organiser-description">
+                        <b>Nima Zargham</b> is a postdoctoral researcher at the Digital Media Lab at the University of
+                        Bremen. His research focuses on human-centred approaches for
+                        designing desirable speech-based systems.
+                    </p>
+                    <img class="organiser-portrait" src="img/zargham.jpg">
+                </div>
+
+                <div class="organiser-content">
+                    <img class="organiser-portrait" src="img/malaka.jpg">
+                    <p class="organiser-description">
+                        <b>Rainer Malaka</b> is professor for Digital Media at the University of Bremen. He is
+                        managing director of the Center for Computing Technologies
+                        (Technologiezentrums Informatik und Informationstechnik, TZI) and
+                        director of the PhD program Empowering Digital Media, funded by
+                        the Klaus Tschira Foundation. His research focus is on multi-modal
+                        interaction, language understanding, entertainment computing,
+                        and artificial intelligence.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </span>
+    <div id="footer">
+      <span id="home-logos">
+                <span class="logo-image"><img src="img/ub.png"></span>
+                <span class="logo-image"><img src="img/dmls.png"></span>
+                <span class="logo-image"><img src="img/kts.png"></span>
+                <span class="logo-image"><img src="img/lsc.png"></span>
+                <span class="logo-image"><img src="img/tue.png"></span>
+                <span class="logo-image"><img src="img/ucd.png"></span>
+        </span>
+    </div>
+
+<!--    <script type="text/javascript" src="js/burger-menu.js"></script>-->
+
+</body>
+</html>
